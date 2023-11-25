@@ -1,0 +1,146 @@
+:root {
+    --moderate-blue: hsl(238, 40%, 52%);
+    --soft-red: hsl(358, 79%, 66%);
+    --light-grayish-blue: hsl(239, 57%, 85%);
+    --pale-red: hsl(357, 100%, 86%);
+    --dark-blue: hsl(212, 24%, 26%);
+    --grayish-blue: hsl(211, 10%, 45%);
+    --light-gray: hsl(223, 19%, 93%);
+    --very-light-gray: hsl(228, 33%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--very-light-gray);
+    min-height: 100svh;
+}
+
+.comments {
+    font-family: Rubik, sans-serif;
+}
+
+.comment,
+.comment-reply {
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.comment-reply {
+    margin-left: 1rem;
+}
+
+.comment__replies {
+    position: relative;
+}
+
+.comment__replies::before {
+    content: '';
+    border: 1px solid var(--light-gray);
+    height: 100%;
+    position: absolute;
+}
+
+.comment__score {
+    align-items: center;
+    background-color: var(--very-light-gray);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem;
+    width: max(10%, 5rem);
+}
+
+.comment__score-plus,
+.comment__score-minus {
+    align-items: center;
+    background-color: var(--very-light-gray);
+    border: none;
+    cursor: pointer;
+    display: flex;
+}
+
+.comment__score-points {
+    color: var(--moderate-blue);
+    font-weight: 700;
+}
+
+.comment__buttons {
+    position: absolute;
+    right: 1rem;
+}
+
+.comment__comment-info {
+    align-items: center;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.comment__comment-avatar {
+    aspect-ratio: 1;
+    height: 2rem;
+}
+
+.comment__comment-user {
+    font-weight: 700;
+    margin-left: 1rem;
+}
+
+.comment__comment-timestamp {
+    color: var(--grayish-blue);
+    margin-left: 1rem;
+}
+
+.comment__comment-you {
+    background-color: var(--moderate-blue);
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-left: 1rem;
+    padding: 0.1rem 0.5rem;
+}
+
+.comment__comment-content {
+    color: var(--grayish-blue);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.comment_comment-replying {
+    color: var(--moderate-blue);
+    font-weight: 500;
+}
+
+.comment__buttons button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Rubik, sans-serif;
+    font-weight: 700;
+}
+
+.comment__buttons button img {
+    margin-right: 0.5rem;
+}
+
+.comment__buttons-delete {
+    color: var(--soft-red);
+}
+
+.comment__buttons-edit,
+.comment__buttons-reply {
+    color: var(--moderate-blue);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
